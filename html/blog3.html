@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootswatch@4.5.2/dist/lux/bootstrap.min.css" >
+
+    <style type="text/css">
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    body{
+        background: white;
+        font-family: 'Open Sans', sans-serif;
+    }
+    
+    .wrap{
+        max-width: 1100px;
+        width: 90%;
+        margin: auto;
+    }
+    
+    .wrap > h1{
+        color: #494B4D;
+        font-weight: 400;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        margin: 15px 0px;
+    }
+    
+    .wrap > h1:after{
+        content: '';
+        width: 100%;
+        height: 1px;
+        background: #C7C7C7;
+        margin: 20px 0;
+    }
+    
+    .store-wrapper{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    
+    .category_list{
+        display: flex;
+        flex-direction: column;
+        width: 18%;
+    }
+    
+    .category_list .category_item{
+        display: block;
+        width: 90%;
+        padding: 15px 0;
+        margin-bottom: 20px;
+        background: #E84C3D;
+    
+        text-align: center;
+        text-decoration: none;
+        color: #fff;
+    }
+    
+    .category_list .ct_item-active{
+        background: #2D3E50;
+    }
+    
+    /* PRODUCTOS ============*/
+    
+    .products-list{
+        width: 82%;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    
+    
+    .products-list .product-item{
+        width: 22%;
+        margin-left: 3%;
+        margin-bottom: 25px;
+        box-shadow: 0px 0px 6px 0px rgba(0,0,0,0.22);
+    
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        align-self: flex-start;
+    
+        transition: all .4s;
+    }
+    
+    .products-list .product-item img{
+        width: 100%;
+    }
+    
+    .products-list .product-item a{
+        display: block;
+        width: 100%;
+        padding: 8px 0;
+        background: #2D3E50;
+    
+        color: #fff;
+        text-align: center;
+        text-decoration: none;
+    }
+    
+    /* RESPONSIVE */
+    
+    @media screen and (max-width: 1100px){
+        .products-list .product-item{
+            width: 30.3%;
+        }
+    }
+    
+    @media screen and (max-width: 900px){
+        .category_list,
+        .products-list{
+            width: 100%;
+        }
+    
+        .category_list{
+            flex-direction: row;
+            justify-content: space-between;
+        }
+    
+        .category_list .category_item{
+            align-self: flex-start;
+            width: 15%;
+            font-size: 14px;
+        }
+    
+        .products-list .product-item{
+            margin-left: 4.5%;
+        }
+    
+        .products-list .product-item:nth-child(3n+1){
+            margin-left: 0px;
+        }
+    }
+    
+    @media screen and (max-width: 700px){
+        .category_list{
+            flex-direction: column;
+        }
+        .category_list .category_item{
+            width: 100%;
+            margin-bottom: 10px;
+        }
+    }
+    
+    @media screen and (max-width: 600px){
+    
+        .products-list .product-item{
+            width: 47.5%;
+        }
+    
+        .products-list .product-item:nth-child(3n+1){
+            margin-left: 4.5%;
+        }
+    
+        .products-list .product-item:nth-child(2n+1){
+            margin-left: 0px;
+        }
+    
+    }
+    
+    @media screen and (max-width: 350px){
+        .products-list .product_item{
+            width: 100%;
+            margin-left: 0px;
+        }
+    }</style>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<title>Filtrando elementos por categorias</title>
+
+    <link rel="stylesheet" href="/css/estilos.css" type="css" />
+
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700" rel="stylesheet">
+
+
+	<script src="/js/jquery-3.2.1.js"></script>
+	<script src="/js/script.js"></script>
+
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light ftco-navbar-light-2" id="ftco-navbar">
+	    <div class="container">
+	      <a class="navbar-brand" href="index.html">Polaris</a>
+	      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+	        <span class="oi oi-menu"></span> Menu
+	      </button>
+
+	      <div class="collapse navbar-collapse" id="ftco-nav">
+	        <ul class="navbar-nav ml-auto">
+                <li class="nav-item active"><a href="/profile" class="nav-link">Home</a></li>
+                <li class="nav-item active"><a href="/html/reservation.html" class="nav-link">Productos</a></li>
+                    <li class="nav-item active"><a href="/html/blog.html" class="nav-link">Historia</a></li>
+                    <li class="nav-item active"><a href="/html/Empleados.html" class="nav-link">Usuarios</a></li>
+                  <li class="nav-item active"><a href="/html/blog-single.html" class="nav-link">Contactos</a></li>
+                <li class="nav-item active"><a href="/html/blog2.html" class="nav-link">Update</a></li>
+                <li class="nav-item active"><a href="/html/blog3.html" class="nav-link">Categorias</a></li>
+                <li class="nav-item active"><a href="/Logout" class="nav-link">Salir</a></li>
+	  	        </ul>
+	      </div>
+	    </div>
+	  </nav>
+
+         <!-- END nav -->
+    
+    <section class="hero-wrap hero-wrap-2" style="background-image: url('/images/bg_4.jpg');" data-stellar-background-ratio="0.19">
+        <div class="overlay"></div>
+        <div class="container">
+          <div class="row no-gutters slider-text align-items-center justify-content-center">
+            <div class="col-md-9 ftco-animate text-center">
+              <h1 class="mb-2 bread"></h1>
+              <p class="breadcrumbs"><span class="mr-2"><a href="blog3.html"> <i class="ion-ios-arrow-forward"></i></a></span> <span class="mr-2"><a href="blog.html"> <i class="ion-ios-arrow-forward"></i></a></span> <span><i class="ion-ios-arrow-forward"></i></span></p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+	<div class="wrap">
+		<h1>Escoge un producto</h1>
+		<div class="store-wrapper">
+			<div class="category_list">
+				<a href="#" class="category_item" category="all">Todo</a>
+				<a href="#" class="category_item" category="Aislantes">Aislantes</a>
+				<a href="#" class="category_item" category="Cielo PVC">Cielo PVC</a>
+				<a href="#" class="category_item" category="Tabla Yeso">Tabla Yeso</a>
+				<a href="#" class="category_item" category="Cielo Falso">Cielo Falso</a>
+				<a href="#" class="category_item" category="Shingle">Shingle</a>
+			</div>
+			<section class="products-list">
+				<div class="product-item" category="Aislantes">
+					<img src="/images/Aislantes_1.jpg" alt="" >
+					<a href="#">Aislantes</a>
+				</div>
+				<div class="product-item" category="Aislantes">
+					<img src="/images/Aislantes_2.jpg" alt="" >
+					<a href="#">Aislantes</a>
+				</div>
+				<div class="product-item" category="Cielo PVC">
+					<img src="/images/PvC_1.jpg" alt="" >
+					<a href="#">Cielo PVC</a>
+				</div>
+				<div class="product-item" category="Cielo PVC">
+					<img src="/images/PvC_2.jpg" alt="" >
+					<a href="#">Cielo PVC</a>
+				</div>
+				<div class="product-item" category="Tabla Yeso">
+					<img src="/images/Yeso_1.jpg" alt="" >
+					<a href="#">Tabla Yeso</a>
+				</div>
+				<div class="product-item" category="Tabla Yeso">
+					<img src="/images/Yeso_2.jpg" alt="" >
+					<a href="#">Tabla Yeso</a>
+				</div>
+				<div class="product-item" category="Cielo Falso">
+					<img src="/images/cielo_1.jpg" alt="" >
+					<a href="#">Cielo Falso</a>
+				</div>
+				<div class="product-item" category="Shingle">
+					<img src="/images/Shingle_1.jpg" alt="" >
+					<a href="#">Shingle</a>
+				</div>
+			</section>
+		</div>
+	</div>
+
+    <footer class="ftco-footer ftco-bg-dark ftco-section">
+        <div class="container">
+          <div class="row mb-5">
+            <div class="col-md-6 col-lg-3">
+              <div class="ftco-footer-widget mb-4">
+                <h2 class="ftco-heading-2">Polaris</h2>
+                <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-3">
+                  <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
+                  <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
+                  <li class="ftco-animate"><a href="#"><span class="icon-instagram"></span></a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+              <div class="ftco-footer-widget mb-4">
+                <h2 class="ftco-heading-2">Open Hours</h2>
+                <ul class="list-unstyled open-hours">
+                  <li class="d-flex"><span>Lunes</span><span>8:00 - 17:00</span></li>
+                  <li class="d-flex"><span>Martes</span><span>8:00 - 17:00</span></li>
+                  <li class="d-flex"><span>Miercoles</span><span>8:00 - 17:00</span></li>
+                  <li class="d-flex"><span>Jueves</span><span>8:00 - 17:00</span></li>
+                  <li class="d-flex"><span>Viernes</span><span>8:00 - 17:00</span></li>
+                  <li class="d-flex"><span>Sabado</span><span>8:00 - 17:00</span></li>
+                  <li class="d-flex"><span>Sunday</span><span> Closed</span></li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+              <div class="ftco-footer-widget mb-4">
+                  <h2 class="ftco-heading-2">Newsletter</h2>
+                  <p>Far far away, behind the word mountains, far from the countries.</p>
+                <form action="#" class="subscribe-form">
+                  <div class="form-group">
+                    <input type="text" class="form-control mb-2 text-center" placeholder="Enter email address">
+                    <input type="submit" value="Subscribe" class="form-control submit px-3">
+                  </div>
+                </form>
+              </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+               <div class="ftco-footer-widget mb-4">
+                <h2 class="ftco-heading-2">Instagram</h2>
+                <div class="thumb d-sm-flex">
+                      <a href="#" class="thumb-menu img" style="background-image: url(images/insta-1.jpg);">
+                      </a>
+                      <a href="#" class="thumb-menu img" style="background-image: url(images/insta-2.jpg);">
+                      </a>
+                      <a href="#" class="thumb-menu img" style="background-image: url(images/insta-3.jpg);">
+                      </a>
+                  </div>
+                  <div class="thumb d-flex">
+                      <a href="#" class="thumb-menu img" style="background-image: url(images/insta-4.jpg);">
+                      </a>
+                      <a href="#" class="thumb-menu img" style="background-image: url(images/insta-5.jpg);">
+                      </a>
+                      <a href="#" class="thumb-menu img" style="background-image: url(images/insta-6.jpg);">
+                      </a>
+                  </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12 text-center">
+  
+              <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+    Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+    <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    
+  
+    <!-- loader -->
+    <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+  
+  
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery-migrate-3.0.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.easing.1.3.js"></script>
+    <script src="js/jquery.waypoints.min.js"></script>
+    <script src="js/jquery.stellar.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/aos.js"></script>
+    <script src="js/jquery.animateNumber.min.js"></script>
+    <script src="js/bootstrap-datepicker.js"></script>
+    <script src="js/jquery.timepicker.min.js"></script>
+    <script src="js/scrollax.min.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+    <script src="js/google-map.js"></script>
+    <script src="js/main.js"></script>
+      
+    </body>
+  </html>
+</body>
+</html>
