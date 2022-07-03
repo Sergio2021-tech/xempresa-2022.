@@ -1,13 +1,13 @@
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Login</title>
+    <title>Polaris Internacional S.A</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootswatch@4.5.2/dist/lux/bootstrap.min.css" >
-    <title>Kusina - Free Bootstrap 4 Template by Colorlib</title>
+  
+    <title>Polaris - Free Bootstrap 4 Template by Colorlib</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     
@@ -44,45 +44,99 @@
 
 	      <div class="collapse navbar-collapse" id="ftco-nav">
 	        <ul class="navbar-nav ml-auto">
-            <li class="nav-item active"><a href="/profile" class="nav-link">Home</a></li>
-            <li class="nav-item active"><a href="/html/reservation.html" class="nav-link">Productos</a></li>
+	        	<li class="nav-item active"><a href="/profile" class="nav-link">Inicio</a></li>
+            <li class="nav-item active"><a href="/html/consultas.html" class="nav-link">Consultas</a></li>
 	        	<li class="nav-item active"><a href="/html/blog.html" class="nav-link">Historia</a></li>
-            <li class="nav-item active"><a href="/html/Empleados.html" class="nav-link">Usuarios</a></li>
-	          <li class="nav-item active"><a href="/html/blog-single.html" class="nav-link">Contactos</a></li>
-            <li class="nav-item active"><a href="/html/blog2.html" class="nav-link">Update</a></li>
-            <li class="nav-item active"><a href="/html/blog3.html" class="nav-link">Categorias</a></li>
+	       <!--   <li class="nav-item active"><a href="/html/blog-single.html" class="nav-link">Contactos</a></li>-->
+         <li class="nav-item active"><a href="/html/productos.html" class="nav-link">Productos</a></li>
             <li class="nav-item active"><a href="/Logout" class="nav-link">Salir</a></li>
-	        </ul>
+	  	        </ul>
 	      </div>
 	    </div>
 	  </nav>
     <!-- END nav -->
-    <section class="hero-wrap hero-wrap-2" style="background-image: url('/images/bg_4.jpg');" data-stellar-background-ratio="0.5">
+    
+    <section class="hero-wrap hero-wrap-2" style="background-image: url('/images/bg_4.jpg');" data-stellar-background-ratio="0.19">
       <div class="overlay"></div>
       <div class="container">
         <div class="row no-gutters slider-text align-items-center justify-content-center">
           <div class="col-md-9 ftco-animate text-center">
             <h1 class="mb-2 bread"></h1>
-            <p class="breadcrumbs"><span class="mr-2"><a href="index.html"><i class="ion-ios-arrow-forward"></i></a></span> <span> <i class="ion-ios-arrow-forward"></i></span></p>
+            <p class="breadcrumbs"><span class="mr-2"><a href="menu.html"> <i class="ion-ios-arrow-forward"></i></a></span> <span class="mr-2"><a href="blog.html"> <i class="ion-ios-arrow-forward"></i></a></span> <span><i class="ion-ios-arrow-forward"></i></span></p>
           </div>
         </div>
       </div>
     </section>
-	
-	
     <p></p>
     <p></p>
     <p></p>
     <p></p>
     <p></p>
-    
-    <script src="/src/components/empleados/pages/Home.js"></script>
 
-    
+      <p></p>
+		<section class="ftco-section ftco-no-pt ftco-no-pb">
+			<div class="container">
+				<div class="row d-flex">
+          <div class="col-md-5 ftco-animate img img-2" style="background-image: url(/images/bg_6.jpg);"></div>
+          <div class="col-md-7 ftco-animate makeconsultas p-4 p-md-5">
+          	<div class="heading-section ftco-animate mb-5">
+              <p></p>
+              <p></p>
+	          	<span class="subheading"></span>
+	            <h2 class="mb-4">Realizar Consulta</h2>
+	          </div>
+            <form action="https://formsubmit.co/2419f64945e411e7aebb831c2da2f536" method="POST">
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="">Nombre Completo</label>
+                    <input type="nombre" class="form-control" placeholder="Nombre completo" name="nombre">
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="">Email</label>
+                    <input type="email" class="form-control" id="subject" placeholder="Correo Electronico"  name="email">
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="">Asunto</label>
+                    <input type="text" class="form-control" id="asunto" placeholder="Asunto" name="asunto">
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <label for="">Telefono</label>
+                    <input type="text" class="form-control" id="phone" placeholder="Numero Telefonico" name="phone">
+                  </div>
+                </div>
 
-    <p></p>
-    <p></p>
-    <p></p>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <div class="select-wrap one-third">
+                      <div class="icon"><span class="ion-ios-arrow-down"></span></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-12 mt-3">
+                  <div class="form-group">
+                            </div>
+                </div>
+              </div>
+              <input type="hidden" name="_next" value="http://localhost:3000/profile">
+              <input type="hidden" name="_captcha" value="false">
+
+              <button class="right" style="BORDER: rgb(221, 233, 53) 3px dashed; FONT-SIZE: 11pt; FONT-FAMILY: Verdana;
+              BACKGROUND-COLOR: rgb(228, 231, 5);  width:33;"  
+              type="submit">Enviar</button>
+              
+            </form>
+          </div>
+        </div>
+			</div>
+      <script src="./sendemail.js" ></script>
+		</section>
     <p></p>
     <p></p>
 
@@ -92,7 +146,7 @@
           <div class="col-md-6 col-lg-3">
             <div class="ftco-footer-widget mb-4">
               <h2 class="ftco-heading-2">Polaris</h2>
-              <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+              <p>Somos una empresa profesional en la importación, venta y distribución de acabados</p>
               <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-3">
                 <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
                 <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
@@ -110,14 +164,14 @@
                 <li class="d-flex"><span>Jueves</span><span>8:00 - 17:00</span></li>
                 <li class="d-flex"><span>Viernes</span><span>8:00 - 17:00</span></li>
                 <li class="d-flex"><span>Sabado</span><span>8:00 - 17:00</span></li>
-                <li class="d-flex"><span>Sunday</span><span> Closed</span></li>
+                <li class="d-flex"><span>Domingo </span><span> Cerrado</span></li>
               </ul>
             </div>
           </div>
           <div class="col-md-6 col-lg-3">
             <div class="ftco-footer-widget mb-4">
-            	<h2 class="ftco-heading-2">Newsletter</h2>
-            	<p>Far far away, behind the word mountains, far from the countries.</p>
+            	<h2 class="ftco-heading-2">Ubicacion</h2>
+            	<p> Residencial Kennedy frente a andifar</p>
               <form action="#" class="subscribe-form">
                 <div class="form-group">
                   <input type="text" class="form-control mb-2 text-center" placeholder="Enter email address">
@@ -127,22 +181,23 @@
             </div>
           </div>
           <div class="col-md-6 col-lg-3">
-             <div class="ftco-footer-widget mb-4">
-              <h2 class="ftco-heading-2">Instagram</h2>
-              <div class="thumb d-sm-flex">
-	            	<a href="#" class="thumb-menu img" style="background-image: url(/images/insta-1.jpg);">
+            <div class="ftco-footer-widget mb-4">
+             <h2 class="ftco-heading-2">Instagram</h2>
+             <p>Polaris_InternacionalSA</p>
+             <div class="thumb d-sm-flex">
+	            	<a href="#" class="thumb-menu img" style="background-image: url(images/insta-1.jpg);">
 	            	</a>
-	            	<a href="#" class="thumb-menu img" style="background-image: url(/images/insta-2.jpg);">
+	            	<a href="#" class="thumb-menu img" style="background-image: url(images/insta-2.jpg);">
 	            	</a>
-	            	<a href="#" class="thumb-menu img" style="background-image: url(/images/insta-3.jpg);">
+	            	<a href="#" class="thumb-menu img" style="background-image: url(images/insta-3.jpg);">
 	            	</a>
 	            </div>
 	            <div class="thumb d-flex">
-	            	<a href="#" class="thumb-menu img" style="background-image: url(/images/insta-4.jpg);">
+	            	<a href="#" class="thumb-menu img" style="background-image: url(images/insta-4.jpg);">
 	            	</a>
-	            	<a href="#" class="thumb-menu img" style="background-image: url(/images/insta-5.jpg);">
+	            	<a href="#" class="thumb-menu img" style="background-image: url(images/insta-5.jpg);">
 	            	</a>
-	            	<a href="#" class="thumb-menu img" style="background-image: url(/images/insta-6.jpg);">
+	            	<a href="#" class="thumb-menu img" style="background-image: url(images/insta-6.jpg);">
 	            	</a>
 	            </div>
             </div>
