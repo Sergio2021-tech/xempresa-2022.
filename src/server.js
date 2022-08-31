@@ -11,11 +11,18 @@ const app = express();
 require('./database');
 require('./passport/local-auth');
 
+app.use(express.static(path.join(__dirname, 'public')))
+
+
 // settings
 app.set('port', process.env.PORT || 3000);
 app.set('views', path.join(__dirname, 'views'))
 app.engine('ejs', engine);
 app.set('view engine', 'ejs');
+//app.engine('jsx', require('ejs').renderFile);
+
+//app.engine('jsx', engine);//
+//app.set('view engine', 'jsx');
 
 // middlewares
 app.use(morgan('dev'));
@@ -30,7 +37,7 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 app.use((req, res, next) => {
-  app.locals.signinMessage = req.flash('signinMessage');
+  app.locals.signinMessage2 = req.flash('signinMessage2');
   app.locals.signupMessage = req.flash('signupMessage');
   app.locals.user = req.user;
   console.log(app.locals)
@@ -51,15 +58,15 @@ app.use('/fonts', express.static('fonts'));
 app.use('/js', express.static('js'));
 app.use('/css', express.static('css/style.css'));
 app.use('/css', express.static('css/estilos.css'));
+//app.use('/jsx', express.static('jsx'));
 
 
-//const main =require('./routes/main')
-//app.use('/',main)
+app.use('/public', express.static('public'));  //funcional dashboard
+app.use('/pages', express.static('pages'));  //funcional dashboard
 
 
 const router = express.Router()
 router.get('/',(req, res, next) => {
   res.render('index')
 })
-
 

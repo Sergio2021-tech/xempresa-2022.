@@ -4,13 +4,13 @@
    <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Polaris Internacional S.A</title>
+  <title>X Empresa Internacional S.A</title>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootswatch@4.5.2/dist/lux/bootstrap.min.css" >
 </head>
   <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
       <div class="container-fluid">
-        <a class="navbar-brand" href="#">Bienvenido</a>
+        <a class="navbar-brand" href="#">S.Castillo BIENVENIDO</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -24,6 +24,7 @@
                   <a class="nav-link " href="/Logout">Salir</a>
               </li>
               <% }  else {%>
+
                 <li class="nav-item">
                   <a class="nav-link " href="/profile">Principal</a>
                 </li>
@@ -36,7 +37,6 @@
                 <a class="nav-link " href="/signup">Registrarse</a>
               </li>
 
-
               <% } %>
           </ul>
         </div>
@@ -44,9 +44,9 @@
     </nav>
     
     <div class="container">
-          <%if (signinMessage.length>0) { %>
+          <%if (signinMessage2.length>0) { %>
        <div class="alert alert-danger">
-         <%= signinMessage %>
+         <%= signinMessage2 %>
     </div>
   
     <% } %>
